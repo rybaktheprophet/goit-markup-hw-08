@@ -1,0 +1,20 @@
+.portfolio__overlay {
+  width: 100%;
+  height: 101%;
+  color: $white;
+  background-color: $project-main;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  padding-top: 49px;
+  padding-left: 24px;
+  padding-right: 45px;
+  transform: translateY(100%);
+  will-change: transform;
+  transition: transform;
+  transition-duration: 250ms;
+  transition-timing-function: $cubic;
+}

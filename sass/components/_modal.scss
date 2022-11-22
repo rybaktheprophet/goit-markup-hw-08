@@ -1,0 +1,179 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  background-color: $white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: $white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    padding-right: 0;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button {
+    margin-bottom: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding-top: 40px;
+    margin-bottom: 12px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+  }
+
+  &__input {
+    position: relative;
+    height: 40px;
+    width: 404px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: color border;
+    transition: 250ms;
+    transition-timing-function: $cubic;
+    outline: none;
+
+    &--textarea {
+      resize: none;
+      height: inherit;
+      width: 430px;
+      font-size: 12px;
+      letter-spacing: 00.01em;
+      color: rgba(117, 117, 117, 0.8);
+      padding-top: 12px;
+      padding-bottom: 20px;
+      padding-left: 16px;
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+      }
+    }
+
+    &:focus {
+      border: 1px solid $project-main;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 15px;
+    fill: $black;
+    transition: 250ms;
+    transition-timing-function: $cubic &--name {
+      bottom: 13px;
+    }
+
+    &--email {
+      bottom: 16px;
+    }
+
+    &--telephone {
+      bottom: 13px;
+    }
+  }
+
+  &__terms {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.71rem;
+    letter-spacing: 0.03em;
+    color: #757575;
+
+    &--link {
+      color: $project-main;
+      text-decoration: underline;
+    }
+
+    & .checkbox {
+      margin-right: 8px;
+      width: 16px;
+      height: 15px;
+      visibility: hidden;
+    }
+
+    & .checked {
+      opacity: 0;
+      position: absolute;
+      left: -24px;
+      top: -8px;
+      transition: 250ms;
+    }
+  }
+}
+
+.input {
+  &__container {
+    position: relative;
+
+    &:focus-within svg {
+      fill: $project-main;
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    color: #757575;
+  }
+}
+
+.checkbox {
+  &-position {
+    position: relative;
+  }
+}
+
+.unchecked {
+  opacity: 1;
+  position: absolute;
+  left: -24px;
+  top: -8px;
+  transition: 250ms;
+}
+
+.checkbox:checked ~ span .checked {
+  opacity: 1;
+}
+.checkbox:checked ~ span .unchecked {
+  opacity: 0;
+}
