@@ -1,14 +1,41 @@
 .header {
   border-bottom: 1px solid #ececec;
+  font-weight: 500;
 
   &__content {
     display: flex;
-    justify-content: space-around;
+    position: relative;
+    justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    font-weight: 500;
-    font-size: 14px;
-    text-decoration: none;
+    padding: 16px 0;
+
+    @media (min-width: $tablet) {
+      padding: 26px 0;
+    }
+    @media (min-width: $desktop) {
+      justify-content: start;
+    }
+  }
+  &__icon--mobile-menu {
+    position: absolute;
+    right: 15px;
+    @media (min-width: $tablet) {
+      display: none;
+    }
+  }
+  &__contact-wrapper {
+    display: none;
+    @media (min-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    @media (min-width: $desktop) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
 }
 
@@ -16,10 +43,12 @@
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: $project-main;
-  font-size: 26px;
-  margin-right: 93px;
-  margin-top: 25px;
-  margin-bottom: 24px;
+  font-size: 24px;
+
+  @media (min-width: $desktop) {
+    font-size: 26px;
+    margin-right: 93px;
+  }
 
   &--black {
     color: $black;
@@ -31,15 +60,21 @@
 }
 
 .header__nav {
+  display: none;
   color: $project-black;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 254px;
-  margin-right: 345px;
   transition: var(--transition-duration);
   transition-timing-function: $cubic;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    gap: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 345px;
+  }
+
   &--active {
     position: relative;
     color: $project-main;
@@ -67,17 +102,23 @@
 }
 
 .header__contact {
+  display: none;
   position: relative;
   color: $grey;
   fill: $grey;
   letter-spacing: 0.02em;
   text-decoration: none;
   line-height: 16px;
-  display: flex;
   transition: 250ms;
   transition-timing-function: $cubic;
-  &--margin {
-    margin-right: 30px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   & svg {
@@ -122,40 +163,23 @@
   }
 }
 
-@media (max-width: 767px) {
-  .container__adaptive {
-    max-width: 480px;
-  }
-  .header {
-    height: 60px;
-    width: 100%;
-
-    &__content {
-      display: flex;
-      flex-basis: inherit;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 16px;
-    }
-  }
-  .header__nav {
-    display: none;
-  }
-  .header__contact {
-    display: none;
-  }
-  .header__icon--mobile-menu {
-    fill: $black;
-    padding-left: 15px;
-  }
-  .logo {
-    margin: 0;
-    font-size: 24px;
-  }
-}
-
-@media (min-width: $tablet) {
-  .header__icon--mobile-menu {
-    display: none;
-  }
-}
+// @media (max-width: 767px) {
+//   .header {
+//     height: 60px;
+//     width: 100%;
+//   }
+//   .header__nav {
+//     display: none;
+//   }
+//   .header__contact {
+//     display: none;
+//   }
+//   .header__icon--mobile-menu {
+//     fill: $black;
+//     padding-left: 15px;
+//   }
+//   .logo {
+//     margin: 0;
+//     font-size: 24px;
+//   }
+// }
