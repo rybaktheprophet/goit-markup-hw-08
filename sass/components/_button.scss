@@ -13,4 +13,9 @@
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+
+  &__banner {
+    display: block;
+    margin: auto;
+  }
 }

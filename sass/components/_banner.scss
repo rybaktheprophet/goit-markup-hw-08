@@ -1,41 +1,35 @@
 .banner {
-  color: white;
-  max-width: 1600px;
+  background-color: #c4c4c4;
   margin: 0 auto;
-  font-weight: 900;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.06em;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  text-transform: uppercase;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/home/Img.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  padding: 118px 0;
+  max-width: 1600px;
 
   &__header {
-    font-size: 44px;
-  }
+    margin-bottom: 30px;
+    color: $white;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: calc(42 / 26);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
 
-  &__container {
-    padding-left: 237px;
-    padding-right: 237px;
+    @media screen and (min-width: $mobile) {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: $tablet) {
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 44px;
+      line-height: calc(60 / 44);
+    }
   }
 }
 
-@media (max-width: 767px) {
-  .banner {
-    width: 100%;
-  }
-  .banner__header {
-    font-size: 26px;
-  }
-  .banner__container {
-    padding: 0;
-  }
+h1 {
+  margin: 0;
+  padding: 0;
 }

@@ -5,8 +5,15 @@
 
   &__content {
     display: flex;
-    justify-content: space-between;
-    gap: 70px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @media (min-width: $desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 70px;
+    }
   }
 
   &__address {
@@ -15,6 +22,7 @@
     text-decoration: none;
     line-height: 1.71;
     padding-top: 20px;
+    text-align: center;
   }
 
   &__contact {
@@ -22,6 +30,7 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
+    text-align: center;
 
     &--email {
       text-decoration: none;
@@ -48,6 +57,7 @@
     color: $white;
     text-transform: uppercase;
     margin: 0 auto;
+    text-align: center;
   }
 
   &__icons {
@@ -89,7 +99,11 @@
   &__form {
     padding-top: 20px;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: $desktop) {
+      justify-content: flex-end;
+    }
   }
 
   &__input {
@@ -122,13 +136,5 @@
   &__send {
     position: absolute;
     right: 28px;
-  }
-}
-
-@media (max-width: 767px) {
-  .footer__content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 }
