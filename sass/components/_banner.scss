@@ -4,6 +4,14 @@
   padding-top: 118px;
   padding-bottom: 118px;
   max-width: 1600px;
+  background-image: url(../images/home/banner_img_s.jpg);
+  background-size: cover;
+  @media (min-width: $tablet) {
+    background-image: url(../images/home/banner_img_m.jpg);
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/home/banner_img_l.jpg);
+  }
 
   &__header {
     margin-bottom: 30px;
@@ -29,9 +37,4 @@
       width: 696px;
     }
   }
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
 }
