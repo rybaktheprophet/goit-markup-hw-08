@@ -1,20 +1,44 @@
 .main-article {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0;
+  gap: 30px;
+  margin: 0 auto;
   padding: 0;
-  padding-inline-start: 0;
+  // padding-inline-start: 0;
+  @media (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
+
+  &__item {
+    // margin-bottom: 30px;
+  }
 
   &__image {
-    width: 270px;
+    margin: auto;
+    width: 450px;
     height: 120px;
     background-color: $background-white;
+
+    @media (min-width: $tablet) {
+      width: 354px;
+    }
+    @media (min-width: $desktop) {
+      width: 270px;
+    }
   }
 
   &__svg {
     padding-top: 25px;
-    padding-left: 100px;
+    padding-left: 190px;
+
+    @media (min-width: $tablet) {
+      padding-left: 142px;
+    }
+    @media (min-width: $desktop) {
+      padding-left: 100px;
+    }
   }
 
   &__paragraph {
@@ -22,8 +46,16 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $grey;
-    width: 270px;
     margin: 0 auto;
+    width: 450px;
+
+    @media (min-width: $tablet) {
+      width: 354px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 270px;
+    }
   }
 
   &__header {
@@ -33,6 +65,11 @@
     margin: 0 auto;
     padding-top: 30px;
     padding-bottom: 10px;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+      text-align: left;
+    }
   }
 }
 
