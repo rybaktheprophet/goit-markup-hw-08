@@ -68,9 +68,9 @@
     gap: 50px;
   }
 
-  @media (min-width: $desktop) {
-    margin-right: 345px;
-  }
+  // @media (min-width: $desktop) {
+  //   margin-right: 345px;
+  // }
 
   &--active {
     position: relative;
@@ -128,7 +128,7 @@
     }
 
     @media (min-width: $desktop) {
-      margin: 0 auto;
+      margin-left: auto;
       padding-left: 0px;
       gap: 30px;
       align-items: center;
@@ -136,23 +136,29 @@
   }
 
   &-item {
-    margin-top: 8px;
-
-    &:focus,
-    &:hover {
-      color: $project-main;
-      fill: $project-main;
-      transition: color 250ms $cubic;
-    }
-
-    &:hover svg {
-      color: $project-main;
-      fill: $project-main;
-      transition: color 250ms $cubic;
+    @media (min-width: $tablet) {
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
     @media (min-width: $desktop) {
-      margin: 0 auto;
+      padding-top: 3px;
     }
+  }
+
+  &:focus,
+  &:hover {
+    color: $project-main;
+    fill: $project-main;
+    transition: color 250ms $cubic;
+  }
+
+  &:hover svg {
+    color: $project-main;
+    fill: $project-main;
+    transition: color 250ms $cubic;
+  }
+  @media (min-width: $desktop) {
+    margin: 0 auto;
   }
 
   &:hover,
@@ -182,10 +188,10 @@
       width: 14px;
       height: 10px;
     }
-    @media (min-width: $desktop) {
-      width: 12px;
-      height: 16px;
-    }
+    // @media (min-width: $desktop) {
+    //   width: 12px;
+    //   height: 16px;
+    // }
   }
 
   &--smartphone {
