@@ -141,7 +141,7 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="services">
+      <section class="services">
         <div class="container">
           <div>
             <h2 class="services__header">Czym się zajmujemy</h2>
@@ -182,14 +182,28 @@
           <h2 class="team__section-header">Nasz zespół</h2>
           <ul class="team__list">
             <li class="team__item">
-              <figure class="team__member">
-                <img
-                  src="./images/home/zespol1.jpg"
-                  alt="członek zespołu"
-                  width="270"
-                  height="260"
-                  class="team__image"
+              <figure class="team__member">             
+               <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/home/zespol1_l@1x.jpg 1x, ./images/home/zespol1_l@2x.jpg 2x"
+                  type="image/jpg"
                 />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/home/zespol1_m@1x.jpg 1x, ./images/home/zespol1_m@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 480px)"
+                  srcset="./images/home/zespol1_s@1x.jpg 1x, ./images/home/zespol1_s@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <img class="team__image" src="./images/home/zespol1.jpg" alt="team member picture" />
+              </picture>
                 <figcaption class="team__description">
                   <h3 class="team__header">John Doe</h3>
                   <p class="team__paragraph">Product Designer</p>
@@ -228,13 +242,27 @@
             </li>
             <li class="team__item">
               <figure class="team__member">
-                <img
-                  src="./images/home/zespol2.jpg"
-                  alt="członek zespołu"
-                  width="270"
-                  height="260"
-                  class="team__image"
+                <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/home/zespol2_l@1x.jpg 1x, ./images/home/zespol2_l@2x.jpg 2x"
+                  type="image/jpg"
                 />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/home/zespol2_m@1x.jpg 1x, ./images/home/zespol2_m@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/home/zespol2_s@1x.jpg 1x, ./images/home/zespol2_s@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <img class="team__image" src="./images/home/zespol2.jpg" alt="team member picture" />
+              </picture>
                 <figcaption class="team__description">
                   <h3 class="team__header">John Doe</h3>
                   Frontend Developer
@@ -273,13 +301,27 @@
             </li>
             <li class="team__item">
               <figure class="team__member">
-                <img
-                  src="./images/home/zespol3.jpg"
-                  alt="członek zespołu"
-                  width="270"
-                  height="260"
-                  class="team__image"
+                <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/home/zespol3_l@1x.jpg 1x, ./images/home/zespol3_l@2x.jpg 2x"
+                  type="image/jpg"
                 />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/home/zespol3_m@1x.jpg 1x, ./images/home/zespol3_m@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 480px)"
+                  srcset="./images/home/zespol3_s@1x.jpg 1x, ./images/home/zespol3_s@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <img class="team__image" src="./images/home/zespol3.jpg" alt="team member picture" />
+              </picture>
                 <figcaption class="team__description">
                   <h3 class="team__header">John Doe</h3>
                   Marketing
@@ -318,13 +360,27 @@
             </li>
             <li class="team__item">
               <figure class="team__member">
-                <img
-                  src="./images/home/zespol4.jpg"
-                  alt="członek zespołu"
-                  width="270"
-                  height="260"
-                  class="team__image"
+                <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/home/zespol4_l@1x.jpg 1x, ./images/home/zespol4_l@2x.jpg 2x"
+                  type="image/jpg"
                 />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/home/zespol4_m@1x.jpg 1x, ./images/home/zespol4_m@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 480px)"
+                  srcset="./images/home/zespol4_s@1x.jpg 1x, ./images/home/zespol4_s@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <img class="team__image" src="./images/home/zespol4.jpg" alt="team member picture" />
+              </picture>
                 <figcaption class="team__description">
                   <h3 class="team__header">John Doe</h3>
                   UI Designer
@@ -364,7 +420,7 @@
           </ul>
         </div>
       </section>
-      <section>
+      <!-- <section>
         <div class="container">
           <div class="clients">
             <h2>Nasi klienci</h2>

@@ -98,6 +98,10 @@
   padding-bottom: 94px;
   display: none;
 
+  @media (min-width: $desktop) {
+    display: flex;
+  }
+
   &__content {
     list-style: none;
     display: flex;
@@ -121,21 +125,5 @@
     text-align: center;
     letter-spacing: 0.03em;
     background: rgba(47, 48, 58, 0.8);
-  }
-}
-
-@media (max-width: 767px) {
-  .main-article {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-
-    &image {
-      width: 100%;
-    }
-  }
-  .services__content {
-    flex-direction: column;
-    align-items: center;
   }
 }
