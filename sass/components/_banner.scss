@@ -70,11 +70,11 @@
     max-width: 360px;
 
     @media (min-width: $mobile) {
-      max-width: 360px;
+      max-width: 380px;
     }
 
-    // @media (min-width: $tablet) {
-    // }
+    @media (min-width: $tablet) {
+    }
     @media screen and (min-width: $desktop) {
       font-size: 44px;
       line-height: calc(60 / 44);
