@@ -1,20 +1,32 @@
 .clients {
-  padding: 94px 0 97px;
+  padding: 60px 0;
+  margin: 0 auto;
+
+  @media (min-width: $desktop) {
+    padding: 94px 0 97px;
+  }
 
   &__list {
     padding-top: 50px;
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
     padding-left: 0;
     margin: 0 auto;
+
+    @media (min-width: $desktop) {
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
-    fill: $grey;
+    fill: $icon-grey;
     height: 92px;
-    width: 170px;
-    border: 1px solid $grey;
+    width: 210px;
+    padding-top: 16px auto;
+    border: 1px solid $icon-grey;
     transition: fill 250ms;
     transition-timing-function: $cubic;
 
@@ -24,16 +36,8 @@
       border-color: $project-main;
     }
   }
-}
-
-@media (max-width: 767px) {
-  .clients {
-    width: 100%;
-    padding: 0;
-    &__list {
-      flex-wrap: wrap;
-      flex-basis: calc(100% / 2);
-      margin-bottom: 30px;
-    }
+  &__icon {
+    width: 210px;
+    height: 92px;
   }
 }
