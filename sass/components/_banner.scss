@@ -59,7 +59,7 @@
   }
 
   &__header {
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     color: $white;
     font-weight: 900;
     font-size: 26px;
@@ -67,11 +67,10 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
+    max-width: 360px;
 
     @media (min-width: $mobile) {
       max-width: 360px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     // @media (min-width: $tablet) {

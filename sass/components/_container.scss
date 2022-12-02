@@ -1,8 +1,8 @@
 .container {
-  width: 100%;
-  margin: auto auto;
+  box-sizing: border-box;
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0 auto;
 
   @media (min-width: $mobile) {
     width: $mobile;
