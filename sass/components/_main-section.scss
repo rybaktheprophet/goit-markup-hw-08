@@ -2,7 +2,7 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 30px;
   margin: 0 auto;
   padding: 0;
@@ -89,41 +89,5 @@
     @media (min-width: $tablet) {
       text-align: left;
     }
-  }
-}
-
-.services {
-  background-color: $white;
-  margin: 0 auto;
-  padding-bottom: 94px;
-  display: none;
-
-  @media (min-width: $desktop) {
-    display: flex;
-  }
-
-  &__content {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    padding-top: 50px;
-    margin: 0;
-    padding-left: 0;
-  }
-
-  &__description {
-    position: absolute;
-    width: 370px;
-    padding: 27px 0 27px;
-    text-transform: uppercase;
-    color: $white;
-    margin-top: -73px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    background: rgba(47, 48, 58, 0.8);
   }
 }
