@@ -1,0 +1,44 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: $white;
+}
+
+.nodisplay {
+  display: none;
+}
+
+.mobile-menu__icon-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background-color: $white;
+}
+
+.mobile-menu__nav-list {
+  color: $project-black;
+  list-style: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+  padding-top: 8px;
+  padding-left: 40px;
+}
+
+.mobile-menu__nav-item {
+  &--active {
+    color: $project-main;
+    margin-bottom: 32px;
+  }
+
+  &--inactive {
+    color: $project-black;
+    margin-bottom: 32px;
+  }
+}

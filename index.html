@@ -15,8 +15,33 @@
   </head>
   <body>
     <header class="header">
+      <!-- <div class="mobile-menu__overlay" data-menu> -->
+      <div class="mobile-menu nodisplay">
+        <!-- <button class="mobile-menu__button" type="button"> -->
+        <svg class="mobile-menu__icon-close" width="40px" height="40px">
+          <use href="./images/icons.svg#icon-close_40px"></use>
+        </svg>
+
+        <ul class="mobile-menu__nav-list">
+          <li class="mobile-menu__nav-item--active">
+            <a href="./index.html" class="mobile-menu__nav-list--active"
+              >Agencja</a
+            >
+          </li>
+          <li class="mobile-menu__nav-item--inactive">
+            <a href="./portfolio.html" class="mobile-menu__nav-list--inactive"
+              >Portfolio</a
+            >
+          </li>
+          <li class="mobile-menu__nav-item">
+            <a href="#" class="mobile-menu__nav-list--inactive">Kontakt</a>
+          </li>
+        </ul>
+
+        <!-- </button> -->
+      </div>
+      <!-- </div> -->
       <div class="container header__content">
-        <!-- <div class="header__content"> -->
         <a href="./index.html" class="logo"
           >Web<span class="logo--black">Studio</span></a
         >
@@ -673,5 +698,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

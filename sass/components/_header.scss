@@ -188,10 +188,6 @@
       width: 14px;
       height: 10px;
     }
-    // @media (min-width: $desktop) {
-    //   width: 12px;
-    //   height: 16px;
-    // }
   }
 
   &--smartphone {
@@ -209,6 +205,15 @@
       margin: 0 auto;
     }
   }
+
+  &--mobile-menu {
+    transition: fill 250ms;
+    transition-timing-function: $cubic;
+    &:hover {
+      fill: $project-main;
+    }
+  }
+
   &:hover {
     color: $project-main;
     fill: $project-main;
