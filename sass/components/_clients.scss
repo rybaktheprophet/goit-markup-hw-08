@@ -30,6 +30,12 @@
     transition: fill 250ms;
     transition-timing-function: $cubic;
 
+    @media (min-width: $desktop) {
+      box-sizing: border-box;
+      width: 170px;
+      padding-right: 32px;
+    }
+
     &:focus,
     &:hover {
       fill: $project-main;
@@ -39,5 +45,9 @@
   &__icon {
     width: 210px;
     height: 92px;
+
+    @media (min-width: $desktop) {
+      width: 170px;
+    }
   }
 }

@@ -15,37 +15,57 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header__content">
-          <a href="./index.html" class="logo"
-            >Web<span class="logo--black">Studio</span></a
-          >
-          <nav class="header__nav">
-            <a href="./index.html" class="header__nav--inactive">Agencja</a>
-            <a href="./portfolio.html" class="header__nav--active">Portfolio</a>
-            <a href="#" class="header__nav--inactive">Kontakt</a>
-          </nav>
-          <a
-            class="header__contact header__contact--margin"
-            href="mailto:info@devstudio.com"
-          >
-            <div class="header__icon header__icon--mail">
-              <svg width="16 " height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-            </div>
+      <div class="container header__content">
+        <!-- <div class="header__content"> -->
+        <a href="./index.html" class="logo"
+          >Web<span class="logo--black">Studio</span></a
+        >
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="./index.html" class="header__nav-list--inactive"
+                >Agencja</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a href="./portfolio.html" class="header__nav-list--active"
+                >Portfolio</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-list--inactive">Kontakt</a>
+            </li>
+          </ul>
+          <button type="button" class="header__icon--mobile-menu">
+            <svg width="24 " height="16">
+              <use href="./images/icons.svg#icon-menu_24px"></use>
+            </svg>
+          </button>
+        </nav>
+        <ul class="header__contact-wrapper">
+          <li class="header__contact-item">
+            <a class="header__contact" href="mailto:info@devstudio.com">
+              <div class="header__icon header__icon--mail">
+                <svg width="16 " height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+              </div>
 
-            info@devstudio.com</a
-          >
-          <a class="header__contact" href="tel:+48111111111">
-            <div class="header__icon">
-              <svg width="10 " height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-            </div>
-            <span class="header__contact"> +48 111 111 111</span></a
-          >
-        </div>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="header__contact-item">
+            <a class="header__contact" href="tel:+48111111111">
+              <div class="header__icon header__icon--smartphone">
+                <svg width="10 " height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+              </div>
+              <span class="header__contact"> +48 111 111 111</span></a
+            >
+          </li>
+        </ul>
+        <!-- </div> -->
       </div>
     </header>
 
@@ -305,8 +325,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__content">
-          <div>
-            <a href="./index.html" class="logo"
+          <div class="footer__contact-block">
+            <a href="./index.html" class="footer-logo"
               >Web<span class="logo--white">Studio</span></a
             >
             <address class="footer__address">

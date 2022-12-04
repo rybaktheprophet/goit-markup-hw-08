@@ -1,9 +1,20 @@
 .footer {
   background-color: $background;
   color: #fff;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &__contact-block {
-    padding: 60px 0;
+    padding-bottom: 60px;
+
+    @media (min-width: $tablet) {
+      margin-right: 165px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: 70px;
+      padding-bottom: 0;
+    }
   }
 
   &-logo {
@@ -16,7 +27,6 @@
 
     @media (min-width: $tablet) {
       padding: 26px 0;
-      margin-right: 88px;
     }
     @media (min-width: $desktop) {
       margin-right: 93px;
@@ -36,19 +46,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding-bottom: 60px;
+
+    @media (max-width: 1199px) {
+      text-align: center;
+    }
 
     @media (min-width: $tablet) {
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 144px;
+      justify-content: center;
     }
 
     @media (min-width: $desktop) {
       flex-direction: row;
-      justify-content: space-between;
-      gap: 70px;
+      justify-content: flex-start;
     }
   }
 
@@ -58,7 +69,6 @@
     text-decoration: none;
     line-height: 1.71;
     padding-top: 20px;
-    text-align: center;
   }
 
   &__contact {
@@ -66,7 +76,6 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
-    text-align: center;
 
     &--email {
       text-decoration: none;
@@ -84,6 +93,14 @@
 
   &__social {
     padding-bottom: 60px;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 102px;
+    }
+    @media (min-width: $desktop) {
+      padding-bottom: 40px;
+      margin-right: 78px;
+    }
   }
 
   &__header {
@@ -93,7 +110,10 @@
     color: $white;
     text-transform: uppercase;
     margin: 0 auto;
-    text-align: center;
+
+    @media (max-width: 1199px) {
+      text-align: center;
+    }
   }
 
   &__icons {
@@ -130,7 +150,7 @@
 
   &__form {
     padding-top: 20px;
-    display: flex;
+
     flex-direction: column;
     align-items: center;
     @media (min-width: $desktop) {
@@ -139,9 +159,10 @@
   }
 
   &__input {
+    box-sizing: border-box;
     background-color: $background;
     line-height: 1.25;
-    width: 350px;
+    width: 290px;
     padding: 14px 0 14px 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -152,6 +173,21 @@
     outline: none;
     transition: 250ms $cubic;
 
+    @media (min-width: $mobile) {
+      width: 450px;
+    }
+
+    @media (min-width: $tablet) {
+      margin-right: 144px;
+      margin-left: 144px;
+    }
+    @media (min-width: $desktop) {
+      width: 358px;
+      margin-left: 0;
+      margin-right: 12px;
+      margin-bottom: 34px;
+    }
+
     &:hover,
     &:focus {
       background-color: $background;
@@ -161,14 +197,14 @@
   }
 
   &__button {
+    text-align: start;
     position: relative;
-    padding: 10px 15px 10px 42px;
-    display: flex;
-    align-content: center;
+    padding-left: 42px;
   }
 
   &__send {
     position: absolute;
-    right: 28px;
+    right: 25px;
+    bottom: 14px;
   }
 }

@@ -10,7 +10,8 @@
     transition: transform;
 
     transition-duration: 250ms;
-    transition-timing-function: $cubic &-header {
+    transition-timing-function: $cubic;
+    &-header {
       color: $project-black;
       font-weight: 700;
       font-size: 18px;

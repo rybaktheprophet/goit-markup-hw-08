@@ -34,6 +34,19 @@
     justify-content: center;
   }
 
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+
+    @media (min-width: $mobile) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
   &__button {
     margin-bottom: 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -53,24 +66,16 @@
     margin-bottom: 12px;
   }
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    padding-left: 40px;
-    padding-right: 40px;
-    align-items: center;
-  }
-
   &__input {
-    position: relative;
+    box-sizing: border-box;
     height: 40px;
-    width: 210px;
+    width: 230px;
 
     @media (min-width: $mobile) {
       width: 370px;
     }
     @media (min-width: $desktop) {
-      width: 404x;
+      width: 448px;
     }
 
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -84,13 +89,13 @@
     &--textarea {
       resize: none;
       height: inherit;
-      width: 210px;
+      width: 230px;
 
       @media (min-width: $mobile) {
         width: 370px;
       }
       @media (min-width: $desktop) {
-        width: 430x;
+        width: 448px;
       }
 
       font-size: 12px;
@@ -116,19 +121,22 @@
 
   &__icon {
     position: absolute;
+    bottom: 15px;
     left: 15px;
     fill: $black;
     transition: 250ms;
-    transition-timing-function: $cubic &--name {
-      bottom: 13px;
-    }
+    transition-timing-function: $cubic;
 
-    &--email {
-      bottom: 16px;
+    &--name {
+      bottom: 11px;
     }
 
     &--telephone {
-      bottom: 13px;
+      bottom: 10px;
+    }
+
+    &--email {
+      bottom: 14px;
     }
   }
 
@@ -169,6 +177,7 @@
       left: -24px;
       top: -8px;
       transition: 250ms;
+      transition-timing-function: $cubic;
     }
   }
 }
@@ -176,6 +185,12 @@
 .input {
   &__container {
     position: relative;
+    transition: color 250s;
+    transition-timing-function: $cubic;
+
+    &:focus-within {
+      color: $project-main;
+    }
 
     &:focus-within svg {
       fill: $project-main;
