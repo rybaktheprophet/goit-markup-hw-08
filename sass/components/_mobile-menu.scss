@@ -1,3 +1,7 @@
+.nodisplay {
+  display: none;
+}
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -6,39 +10,90 @@
   height: 100vh;
   z-index: 2;
   background-color: $white;
-}
 
-.nodisplay {
-  display: none;
-}
+  &__icon-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background-color: $white;
+  }
 
-.mobile-menu__icon-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  border: none;
-  background-color: $white;
-}
+  &__nav-list {
+    text-decoration: none;
+    color: $project-black;
+    list-style: none;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    padding-top: 8px;
+    padding-left: 40px;
+    margin-bottom: 302px;
+  }
 
-.mobile-menu__nav-list {
-  color: $project-black;
-  list-style: none;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 47px;
-  letter-spacing: 0.02em;
-  padding-top: 8px;
-  padding-left: 40px;
-}
+  &__nav-item {
+    text-decoration: none;
+    color: $project-black;
+    margin-bottom: 32px !important;
+    color: currentColor;
+  }
 
-.mobile-menu__nav-item {
-  &--active {
+  &__nav-link {
+    text-decoration: none;
+
+    &--active {
+      color: $project-main !important;
+    }
+    &--inactive {
+      color: $project-black;
+    }
+  }
+
+  &__list-contact {
+    font-size: 24px;
+    list-style: none;
+    font-weight: 500;
+    color: $grey;
+    margin-bottom: 64px;
+  }
+
+  &__list-contact-tel {
+    font-size: 34px;
     color: $project-main;
     margin-bottom: 32px;
   }
 
-  &--inactive {
-    color: $project-black;
-    margin-bottom: 32px;
+  &__link-contact-tel {
+    color: currentColor;
+  }
+
+  &__list-contact-mail {
+    font-size: 24px !important;
+    color: $grey !important;
+  }
+
+  &__link-contact-mail:link {
+    color: $grey;
+  }
+
+  &__list-social {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  &__link-social {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
+    color: $project-main;
+  }
+
+  &__item-social:not(:last-child) &__link-social {
+    display: flex;
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
 }

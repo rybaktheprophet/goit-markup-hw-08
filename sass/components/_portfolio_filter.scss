@@ -1,21 +1,24 @@
 .portfolio-filter {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  padding-top: 94px;
-  margin: 0;
-
   &__list {
     list-style: none;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 8px;
+    padding-left: 0;
+    margin: 0 auto;
+
+    @media (min-width: $tablet) {
+      justify-content: center;
+    }
+    @media (min-width: $desktop) {
+      justify-content: center;
+    }
   }
 
   &__button {
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 16px;
     line-height: 1.62;
     border: 0px;
